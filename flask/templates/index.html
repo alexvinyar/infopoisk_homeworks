@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Search page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    a {
+        color: darkviolet;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: magenta;
+    }
+    
+    a:visited {
+        color: grey;
+    }
+    
+    #button {
+        background-color: pink;
+        border: none;
+        padding: 5px 10px;
+    }
+    </style>
+</head>
+<body>
+<img src="http://www.pravda-news.ru/templates/skin/pravda-news/images/logo.png"></img>
+<form>
+Your query: <input type="text" name="query"></input><br>
+<button type="submit"id="button">Search</button>
+</form>
+{% for href,title in links %}
+<a href="{{ href }}" target="_blank">{{ title }}</a><br>
+{% endfor %}
+</body>
+</html>
